@@ -1,0 +1,1829 @@
+[
+  {
+    "country": "Afghanistan",
+    "continent": "Asia",
+    "government": "Islamic Emirate",
+    "landlocked": "1",
+    "population": 37172386,
+    "religion": "Islam",
+    "temperature": 13.37
+  },
+  {
+    "country": "Albania",
+    "continent": "Europe",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 2866376,
+    "religion": "Islam",
+    "temperature": 12.44
+  },
+  {
+    "country": "Algeria",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 42228429,
+    "religion": "Islam",
+    "temperature": 23.6
+  },
+  {
+    "country": "American Samoa",
+    "continent": "Oceania",
+    "government": "US Territory",
+    "landlocked": "0",
+    "population": 55465,
+    "religion": "Christianity",
+    "temperature": 27.38
+  },
+  {
+    "country": "Andorra",
+    "continent": "Europe",
+    "government": "Parliamentary Coprincipality",
+    "landlocked": "1",
+    "population": 77006,
+    "religion": "Christianity",
+    "temperature": 8.27
+  },
+  {
+    "country": "Angola",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 30809762,
+    "religion": "Christianity",
+    "temperature": 21.77
+  },
+  {
+    "country": "Anguilla",
+    "continent": "North America",
+    "government": "Dependent Territory of the UK",
+    "landlocked": "0",
+    "population": 15094,
+    "religion": "Christianity",
+    "temperature": 27.71
+  },
+  {
+    "country": "Antigua and Barbuda",
+    "continent": "North America",
+    "government": "Constitutional Monarchy",
+    "landlocked": "0",
+    "population": 96286,
+    "religion": "Christianity",
+    "temperature": 27.2
+  },
+  {
+    "country": "Argentina",
+    "continent": "South America",
+    "government": "Federal Republic",
+    "landlocked": "0",
+    "population": 44494502,
+    "religion": "Christianity",
+    "temperature": 15.11
+  },
+  {
+    "country": "Armenia",
+    "continent": "Asia",
+    "government": "Republic",
+    "landlocked": "1",
+    "population": 2951776,
+    "religion": "Christianity",
+    "temperature": 7.82
+  },
+  {
+    "country": "Aruba",
+    "continent": "North America",
+    "government": "Nonmetropolitan Territory of The Netherlands",
+    "landlocked": "0",
+    "population": 105845,
+    "religion": "Christianity",
+    "temperature": 29.17
+  },
+  {
+    "country": "Australia",
+    "continent": "Oceania",
+    "government": "Federation Constitutional Monarchy",
+    "landlocked": "0",
+    "population": 24982688,
+    "religion": "Christianity",
+    "temperature": 22.05
+  },
+  {
+    "country": "Austria",
+    "continent": "Europe",
+    "government": "Federal Republic",
+    "landlocked": "1",
+    "population": 8840521,
+    "religion": "Christianity",
+    "temperature": 7.44
+  },
+  {
+    "country": "Azerbaijan",
+    "continent": "Asia",
+    "government": "Federal Republic",
+    "landlocked": "1",
+    "population": 9939800,
+    "religion": "Islam",
+    "temperature": 12.96
+  },
+  {
+    "country": "Bahamas",
+    "continent": "North America",
+    "government": "Constitutional Monarchy",
+    "landlocked": "0",
+    "population": 385640,
+    "religion": "Christianity",
+    "temperature": 25.58
+  },
+  {
+    "country": "Bahrain",
+    "continent": "Asia",
+    "government": "Monarchy (Emirate)",
+    "landlocked": "0",
+    "population": 1569439,
+    "religion": "Islam",
+    "temperature": 27.69
+  },
+  {
+    "country": "Bangladesh",
+    "continent": "Asia",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 161356039,
+    "religion": "Islam",
+    "temperature": 25.71
+  },
+  {
+    "country": "Barbados",
+    "continent": "North America",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 286641,
+    "religion": "Christianity",
+    "temperature": 26.61
+  },
+  {
+    "country": "Belarus",
+    "continent": "Europe",
+    "government": "Republic",
+    "landlocked": "1",
+    "population": 9483499,
+    "religion": "Christianity",
+    "temperature": 7.45
+  },
+  {
+    "country": "Belgium",
+    "continent": "Europe",
+    "government": "Federation Constitutional Monarchy",
+    "landlocked": "0",
+    "population": 11433256,
+    "religion": "Christianity",
+    "temperature": 10.67
+  },
+  {
+    "country": "Belize",
+    "continent": "North America",
+    "government": "Constitutional Monarchy",
+    "landlocked": "0",
+    "population": 383071,
+    "religion": "Christianity",
+    "temperature": 25.7
+  },
+  {
+    "country": "Benin",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 11485048,
+    "religion": "Christianity",
+    "temperature": 28.02
+  },
+  {
+    "country": "Bermuda",
+    "continent": "North America",
+    "government": "Dependent Territory of the UK",
+    "landlocked": "0",
+    "population": 63973,
+    "religion": "Christianity",
+    "temperature": 21.67
+  },
+  {
+    "country": "Bhutan",
+    "continent": "Asia",
+    "government": "Monarchy",
+    "landlocked": "1",
+    "population": 754394,
+    "religion": "Buddhism",
+    "temperature": 10.38
+  },
+  {
+    "country": "Bolivia",
+    "continent": "South America",
+    "government": "Republic",
+    "landlocked": "1",
+    "population": 11353142,
+    "religion": "Christianity",
+    "temperature": 20.76
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "continent": "Europe",
+    "government": "Federal Republic",
+    "landlocked": "0",
+    "population": 3323929,
+    "religion": "Christianity",
+    "temperature": 10.35
+  },
+  {
+    "country": "Botswana",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "1",
+    "population": 2254126,
+    "religion": "Christianity",
+    "temperature": 22.09
+  },
+  {
+    "country": "Brazil",
+    "continent": "South America",
+    "government": "Federal Republic",
+    "landlocked": "0",
+    "population": 209469333,
+    "religion": "Christianity",
+    "temperature": 25.44
+  },
+  {
+    "country": "Brunei",
+    "continent": "Asia",
+    "government": "Monarchy (Sultanate)",
+    "landlocked": "0",
+    "population": 428962,
+    "religion": "Islam",
+    "temperature": 26.95
+  },
+  {
+    "country": "Bulgaria",
+    "continent": "Europe",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 7025037,
+    "religion": "Christianity",
+    "temperature": 11.35
+  },
+  {
+    "country": "Burkina Faso",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "1",
+    "population": 19751535,
+    "religion": "Islam",
+    "temperature": 29.26
+  },
+  {
+    "country": "Burundi",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "1",
+    "population": 11175378,
+    "religion": "Christianity",
+    "temperature": 20.51
+  },
+  {
+    "country": "Cambodia",
+    "continent": "Asia",
+    "government": "Constitutional Monarchy",
+    "landlocked": "0",
+    "population": 16249798,
+    "religion": "Buddhism",
+    "temperature": 27.41
+  },
+  {
+    "country": "Cameroon",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 25216237,
+    "religion": "Christianity",
+    "temperature": 24.8
+  },
+  {
+    "country": "Canada",
+    "continent": "North America",
+    "government": "Constitutional Monarchy, Federation",
+    "landlocked": "0",
+    "population": 37057765,
+    "religion": "Christianity",
+    "temperature": -4.03
+  },
+  {
+    "country": "Cayman Islands",
+    "continent": "North America",
+    "government": "Dependent Territory of the UK",
+    "landlocked": "0",
+    "population": 64174,
+    "religion": "Christianity",
+    "temperature": 27.82
+  },
+  {
+    "country": "Central African Republic",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "1",
+    "population": 4666377,
+    "religion": "Christianity",
+    "temperature": 25.47
+  },
+  {
+    "country": "Chad",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "1",
+    "population": 15477751,
+    "religion": "Islam",
+    "temperature": 27.63
+  },
+  {
+    "country": "Chile",
+    "continent": "South America",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 18729160,
+    "religion": "Christianity",
+    "temperature": 9.39
+  },
+  {
+    "country": "Colombia",
+    "continent": "South America",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 49648685,
+    "religion": "Christianity",
+    "temperature": 25
+  },
+  {
+    "country": "Comoros",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 832322,
+    "religion": "Islam",
+    "temperature": 23.73
+  },
+  {
+    "country": "Congo",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 5244363,
+    "religion": "Christianity",
+    "temperature": 24.74
+  },
+  {
+    "country": "Cook Islands",
+    "continent": "Oceania",
+    "government": "Nonmetropolitan Territory of New Zealand",
+    "landlocked": "0",
+    "population": 17379,
+    "religion": "Christianity",
+    "temperature": 24.71
+  },
+  {
+    "country": "Costa Rica",
+    "continent": "North America",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 4999441,
+    "religion": "Christianity",
+    "temperature": 24.83
+  },
+  {
+    "country": "Croatia",
+    "continent": "Europe",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 4087843,
+    "religion": "Christianity",
+    "temperature": 11.96
+  },
+  {
+    "country": "Cuba",
+    "continent": "North America",
+    "government": "Socialistic Republic",
+    "landlocked": "0",
+    "population": 11338138,
+    "religion": "Christianity",
+    "temperature": 25.81
+  },
+  {
+    "country": "Cyprus",
+    "continent": "Asia",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 1189265,
+    "religion": "Christianity",
+    "temperature": 18.95
+  },
+  {
+    "country": "Denmark",
+    "continent": "Europe",
+    "government": "Constitutional Monarchy",
+    "landlocked": "0",
+    "population": 5793636,
+    "religion": "Christianity",
+    "temperature": 8.9
+  },
+  {
+    "country": "Djibouti",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 958920,
+    "religion": "Islam",
+    "temperature": 28.49
+  },
+  {
+    "country": "Dominica",
+    "continent": "North America",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 71625,
+    "religion": "Christianity",
+    "temperature": 26.83
+  },
+  {
+    "country": "Dominican Republic",
+    "continent": "North America",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 10627165,
+    "religion": "Christianity",
+    "temperature": 24.55
+  },
+  {
+    "country": "Ecuador",
+    "continent": "South America",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 17084357,
+    "religion": "Christianity",
+    "temperature": 21.43
+  },
+  {
+    "country": "Egypt",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 98423595,
+    "religion": "Islam",
+    "temperature": 23.14
+  },
+  {
+    "country": "El Salvador",
+    "continent": "North America",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 6420744,
+    "religion": "Christianity",
+    "temperature": 25.23
+  },
+  {
+    "country": "Equatorial Guinea",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 1308974,
+    "religion": "Christianity",
+    "temperature": 24.66
+  },
+  {
+    "country": "Eritrea",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 6213972,
+    "religion": "Christianity",
+    "temperature": 26.63
+  },
+  {
+    "country": "Eswatini",
+    "continent": "Africa",
+    "government": "Monarchy",
+    "landlocked": "1",
+    "population": 1136191,
+    "religion": "Christianity",
+    "temperature": 20.64
+  },
+  {
+    "country": "Ethiopia",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "1",
+    "population": 109224559,
+    "religion": "Christianity",
+    "temperature": 23.37
+  },
+  {
+    "country": "Fiji Islands",
+    "continent": "Oceania",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 883483,
+    "religion": "Christianity",
+    "temperature": 24.68
+  },
+  {
+    "country": "Finland",
+    "continent": "Europe",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 5515525,
+    "religion": "Christianity",
+    "temperature": 2.46
+  },
+  {
+    "country": "France",
+    "continent": "Europe",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 66977107,
+    "religion": "Christianity",
+    "temperature": 11.65
+  },
+  {
+    "country": "French Polynesia",
+    "continent": "Oceania",
+    "government": "Nonmetropolitan Territory of France",
+    "landlocked": "0",
+    "population": 277679,
+    "religion": "Christianity",
+    "temperature": 24.3
+  },
+  {
+    "country": "Gabon",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 2119275,
+    "religion": "Christianity",
+    "temperature": 25.2
+  },
+  {
+    "country": "Gambia",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 2280102,
+    "religion": "Islam",
+    "temperature": 28.38
+  },
+  {
+    "country": "Georgia",
+    "continent": "Asia",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 3726549,
+    "religion": "Christianity",
+    "temperature": 9.01
+  },
+  {
+    "country": "Germany",
+    "continent": "Europe",
+    "government": "Federal Republic",
+    "landlocked": "0",
+    "population": 82905782,
+    "religion": "Christianity",
+    "temperature": 9.59
+  },
+  {
+    "country": "Ghana",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 29767108,
+    "religion": "Christianity",
+    "temperature": 27.66
+  },
+  {
+    "country": "Gibraltar",
+    "continent": "Europe",
+    "government": "Dependent Territory of the UK",
+    "landlocked": "0",
+    "population": 33718,
+    "religion": "Christianity",
+    "temperature": 18.15
+  },
+  {
+    "country": "Greece",
+    "continent": "Europe",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 10731726,
+    "religion": "Christianity",
+    "temperature": 14.26
+  },
+  {
+    "country": "Greenland",
+    "continent": "North America",
+    "government": "Part of Denmark",
+    "landlocked": "0",
+    "population": 56025,
+    "religion": "Christianity",
+    "temperature": -18.68
+  },
+  {
+    "country": "Grenada",
+    "continent": "North America",
+    "government": "Constitutional Monarchy",
+    "landlocked": "0",
+    "population": 111454,
+    "religion": "Christianity",
+    "temperature": 26.49
+  },
+  {
+    "country": "Guam",
+    "continent": "Oceania",
+    "government": "US Territory",
+    "landlocked": "0",
+    "population": 165768,
+    "religion": "Christianity",
+    "temperature": 27.81
+  },
+  {
+    "country": "Guatemala",
+    "continent": "North America",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 17247807,
+    "religion": "Christianity",
+    "temperature": 23.65
+  },
+  {
+    "country": "Guinea",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 12414318,
+    "religion": "Islam",
+    "temperature": 25.86
+  },
+  {
+    "country": "Guinea-Bissau",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 1874309,
+    "religion": "Islam",
+    "temperature": 27.98
+  },
+  {
+    "country": "Guyana",
+    "continent": "South America",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 779004,
+    "religion": "Christianity",
+    "temperature": 26.12
+  },
+  {
+    "country": "Haiti",
+    "continent": "North America",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 11123176,
+    "religion": "Christianity",
+    "temperature": 24.95
+  },
+  {
+    "country": "Honduras",
+    "continent": "North America",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 9587522,
+    "religion": "Christianity",
+    "temperature": 24.72
+  },
+  {
+    "country": "Hungary",
+    "continent": "Europe",
+    "government": "Republic",
+    "landlocked": "1",
+    "population": 9775564,
+    "religion": "Christianity",
+    "temperature": 11.5
+  },
+  {
+    "country": "Iceland",
+    "continent": "Europe",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 352721,
+    "religion": "Christianity",
+    "temperature": 1.85
+  },
+  {
+    "country": "India",
+    "continent": "Asia",
+    "government": "Federal Republic",
+    "landlocked": "0",
+    "population": 1352617328,
+    "religion": "Hinduism",
+    "temperature": 24.94
+  },
+  {
+    "country": "Indonesia",
+    "continent": "Asia",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 267663435,
+    "religion": "Islam",
+    "temperature": 25.96
+  },
+  {
+    "country": "Iran",
+    "continent": "Asia",
+    "government": "Islamic Republic",
+    "landlocked": "0",
+    "population": 81800269,
+    "religion": "Islam",
+    "temperature": 18.34
+  },
+  {
+    "country": "Iraq",
+    "continent": "Asia",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 38433600,
+    "religion": "Islam",
+    "temperature": 22.95
+  },
+  {
+    "country": "Ireland",
+    "continent": "Europe",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 4867309,
+    "religion": "Christianity",
+    "temperature": 9.73
+  },
+  {
+    "country": "Israel",
+    "continent": "Asia",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 8882800,
+    "religion": "Judaism",
+    "temperature": 19.99
+  },
+  {
+    "country": "Italy",
+    "continent": "Europe",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 60421760,
+    "religion": "Christianity",
+    "temperature": 13.22
+  },
+  {
+    "country": "Ivory Coast",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 25069229,
+    "religion": "Islam",
+    "temperature": 26.8
+  },
+  {
+    "country": "Jamaica",
+    "continent": "North America",
+    "government": "Constitutional Monarchy",
+    "landlocked": "0",
+    "population": 2934855,
+    "religion": "Christianity",
+    "temperature": 25.91
+  },
+  {
+    "country": "Jordan",
+    "continent": "Asia",
+    "government": "Constitutional Monarchy",
+    "landlocked": "0",
+    "population": 9956011,
+    "religion": "Islam",
+    "temperature": 19.52
+  },
+  {
+    "country": "Kazakhstan",
+    "continent": "Asia",
+    "government": "Republic",
+    "landlocked": "1",
+    "population": 18272430,
+    "religion": "Islam",
+    "temperature": 7.11
+  },
+  {
+    "country": "Kenya",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 51393010,
+    "religion": "Christianity",
+    "temperature": 25.08
+  },
+  {
+    "country": "Kiribati",
+    "continent": "Oceania",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 115847,
+    "religion": "Christianity",
+    "temperature": 27.77
+  },
+  {
+    "country": "Kuwait",
+    "continent": "Asia",
+    "government": "Constitutional Monarchy (Emirate)",
+    "landlocked": "0",
+    "population": 4137309,
+    "religion": "Islam",
+    "temperature": 26.31
+  },
+  {
+    "country": "Kyrgyzstan",
+    "continent": "Asia",
+    "government": "Republic",
+    "landlocked": "1",
+    "population": 6322800,
+    "religion": "Islam",
+    "temperature": 2.65
+  },
+  {
+    "country": "Laos",
+    "continent": "Asia",
+    "government": "Republic",
+    "landlocked": "1",
+    "population": 7061507,
+    "religion": "Buddhism",
+    "temperature": 24.16
+  },
+  {
+    "country": "Latvia",
+    "continent": "Europe",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 1927174,
+    "religion": "Christianity",
+    "temperature": 6.87
+  },
+  {
+    "country": "Lebanon",
+    "continent": "Asia",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 6848925,
+    "religion": "Islam",
+    "temperature": 15.45
+  },
+  {
+    "country": "Lesotho",
+    "continent": "Africa",
+    "government": "Constitutional Monarchy",
+    "landlocked": "1",
+    "population": 2108132,
+    "religion": "Christianity",
+    "temperature": 12.38
+  },
+  {
+    "country": "Liberia",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 4818977,
+    "religion": "Christianity",
+    "temperature": 25.45
+  },
+  {
+    "country": "Libya",
+    "continent": "Africa",
+    "government": "Socialistic State",
+    "landlocked": "0",
+    "population": 6678567,
+    "religion": "Islam",
+    "temperature": 22.81
+  },
+  {
+    "country": "Liechtenstein",
+    "continent": "Europe",
+    "government": "Constitutional Monarchy",
+    "landlocked": "1",
+    "population": 37910,
+    "religion": "Christianity",
+    "temperature": 7.55
+  },
+  {
+    "country": "Lithuania",
+    "continent": "Europe",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 2801543,
+    "religion": "Christianity",
+    "temperature": 7.38
+  },
+  {
+    "country": "Luxembourg",
+    "continent": "Europe",
+    "government": "Constitutional Monarchy",
+    "landlocked": "1",
+    "population": 607950,
+    "religion": "Christianity",
+    "temperature": 10.02
+  },
+  {
+    "country": "Madagascar",
+    "continent": "Africa",
+    "government": "Federal Republic",
+    "landlocked": "0",
+    "population": 26262368,
+    "religion": "Christianity",
+    "temperature": 22.64
+  },
+  {
+    "country": "Malawi",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "1",
+    "population": 18143315,
+    "religion": "Christianity",
+    "temperature": 22.66
+  },
+  {
+    "country": "Malaysia",
+    "continent": "Asia",
+    "government": "Constitutional Monarchy",
+    "landlocked": "0",
+    "population": 31528585,
+    "religion": "Islam",
+    "temperature": 26.38
+  },
+  {
+    "country": "Maldives",
+    "continent": "Asia",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 515696,
+    "religion": "Islam",
+    "temperature": 28.11
+  },
+  {
+    "country": "Mali",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "1",
+    "population": 19077690,
+    "religion": "Islam",
+    "temperature": 29.21
+  },
+  {
+    "country": "Malta",
+    "continent": "Europe",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 484630,
+    "religion": "Christianity",
+    "temperature": 19.58
+  },
+  {
+    "country": "Marshall Islands",
+    "continent": "Oceania",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 58413,
+    "religion": "Christianity",
+    "temperature": 28.01
+  },
+  {
+    "country": "Mauritania",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 4403319,
+    "religion": "Islam",
+    "temperature": 28.82
+  },
+  {
+    "country": "Mauritius",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 1265303,
+    "religion": "Hinduism",
+    "temperature": 23.33
+  },
+  {
+    "country": "Mexico",
+    "continent": "North America",
+    "government": "Federal Republic",
+    "landlocked": "0",
+    "population": 126190788,
+    "religion": "Christianity",
+    "temperature": 21.31
+  },
+  {
+    "country": "Moldova",
+    "continent": "Europe",
+    "government": "Republic",
+    "landlocked": "1",
+    "population": 2706049,
+    "religion": "Christianity",
+    "temperature": 10.89
+  },
+  {
+    "country": "Monaco",
+    "continent": "Europe",
+    "government": "Constitutional Monarchy",
+    "landlocked": "0",
+    "population": 38682,
+    "religion": "Christianity",
+    "temperature": 13.53
+  },
+  {
+    "country": "Mongolia",
+    "continent": "Asia",
+    "government": "Republic",
+    "landlocked": "1",
+    "population": 3170208,
+    "religion": "Buddhism",
+    "temperature": 1.07
+  },
+  {
+    "country": "Montserrat",
+    "continent": "North America",
+    "government": "Dependent Territory of the UK",
+    "landlocked": "0",
+    "population": 5900,
+    "religion": "Christianity",
+    "temperature": 25.75
+  },
+  {
+    "country": "Morocco",
+    "continent": "Africa",
+    "government": "Constitutional Monarchy",
+    "landlocked": "0",
+    "population": 36029138,
+    "religion": "Islam",
+    "temperature": 18.14
+  },
+  {
+    "country": "Mozambique",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 29495962,
+    "religion": "Christianity",
+    "temperature": 24.41
+  },
+  {
+    "country": "Myanmar",
+    "continent": "Asia",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 53708395,
+    "religion": "Buddhism",
+    "temperature": 23.82
+  },
+  {
+    "country": "Namibia",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 2448255,
+    "religion": "Christianity",
+    "temperature": 20.45
+  },
+  {
+    "country": "Nauru",
+    "continent": "Oceania",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 12704,
+    "religion": "Christianity",
+    "temperature": 27.83
+  },
+  {
+    "country": "Nepal",
+    "continent": "Asia",
+    "government": "Federal parliamentary republic",
+    "landlocked": "1",
+    "population": 28087871,
+    "religion": "Hinduism",
+    "temperature": 14.17
+  },
+  {
+    "country": "Netherlands",
+    "continent": "Europe",
+    "government": "Constitutional Monarchy",
+    "landlocked": "0",
+    "population": 17231624,
+    "religion": "Christianity",
+    "temperature": 10.49
+  },
+  {
+    "country": "New Caledonia",
+    "continent": "Oceania",
+    "government": "Nonmetropolitan Territory of France",
+    "landlocked": "0",
+    "population": 284060,
+    "religion": "Christianity",
+    "temperature": 22.69
+  },
+  {
+    "country": "New Zealand",
+    "continent": "Oceania",
+    "government": "Constitutional Monarchy",
+    "landlocked": "0",
+    "population": 4841000,
+    "religion": "Christianity",
+    "temperature": 10.46
+  },
+  {
+    "country": "Nicaragua",
+    "continent": "North America",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 6465513,
+    "religion": "Christianity",
+    "temperature": 25.88
+  },
+  {
+    "country": "Niger",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "1",
+    "population": 22442948,
+    "religion": "Islam",
+    "temperature": 28.04
+  },
+  {
+    "country": "Nigeria",
+    "continent": "Africa",
+    "government": "Federal Republic",
+    "landlocked": "0",
+    "population": 195874740,
+    "religion": "Christianity",
+    "temperature": 27.3
+  },
+  {
+    "country": "Niue",
+    "continent": "Oceania",
+    "government": "Nonmetropolitan Territory of New Zealand",
+    "landlocked": "0",
+    "population": 1624,
+    "religion": "Christianity",
+    "temperature": 25.03
+  },
+  {
+    "country": "North Macedonia",
+    "continent": "Europe",
+    "government": "Republic",
+    "landlocked": "1",
+    "population": 2084367,
+    "religion": "Christianity",
+    "temperature": 10.79
+  },
+  {
+    "country": "Northern Mariana Islands",
+    "continent": "Oceania",
+    "government": "Commonwealth of the US",
+    "landlocked": "0",
+    "population": 56882,
+    "religion": "Christianity",
+    "temperature": 27.6
+  },
+  {
+    "country": "Norway",
+    "continent": "Europe",
+    "government": "Constitutional Monarchy",
+    "landlocked": "0",
+    "population": 5311916,
+    "religion": "Christianity",
+    "temperature": 2.21
+  },
+  {
+    "country": "Oman",
+    "continent": "Asia",
+    "government": "Monarchy (Sultanate)",
+    "landlocked": "0",
+    "population": 4829483,
+    "religion": "Islam",
+    "temperature": 27.64
+  },
+  {
+    "country": "Pakistan",
+    "continent": "Asia",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 212215030,
+    "religion": "Islam",
+    "temperature": 21.38
+  },
+  {
+    "country": "Palau",
+    "continent": "Oceania",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 17907,
+    "religion": "Christianity",
+    "temperature": 27.9
+  },
+  {
+    "country": "Palestine",
+    "continent": "Asia",
+    "government": "Autonomous Area",
+    "landlocked": "0",
+    "population": 4569087,
+    "religion": "Islam",
+    "temperature": 19.5
+  },
+  {
+    "country": "Panama",
+    "continent": "North America",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 4176873,
+    "religion": "Christianity",
+    "temperature": 25.6
+  },
+  {
+    "country": "Papua New Guinea",
+    "continent": "Oceania",
+    "government": "Constitutional Monarchy",
+    "landlocked": "0",
+    "population": 8606316,
+    "religion": "Christianity",
+    "temperature": 24.74
+  },
+  {
+    "country": "Paraguay",
+    "continent": "South America",
+    "government": "Republic",
+    "landlocked": "1",
+    "population": 6956071,
+    "religion": "Christianity",
+    "temperature": 23.92
+  },
+  {
+    "country": "Peru",
+    "continent": "South America",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 31989256,
+    "religion": "Christianity",
+    "temperature": 19.72
+  },
+  {
+    "country": "Philippines",
+    "continent": "Asia",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 106651922,
+    "religion": "Christianity",
+    "temperature": 26.27
+  },
+  {
+    "country": "Poland",
+    "continent": "Europe",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 37974750,
+    "religion": "Christianity",
+    "temperature": 8.78
+  },
+  {
+    "country": "Portugal",
+    "continent": "Europe",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 10283822,
+    "religion": "Christianity",
+    "temperature": 15.85
+  },
+  {
+    "country": "Puerto Rico",
+    "continent": "North America",
+    "government": "Commonwealth of the US",
+    "landlocked": "0",
+    "population": 3195153,
+    "religion": "Christianity",
+    "temperature": 25.04
+  },
+  {
+    "country": "Qatar",
+    "continent": "Asia",
+    "government": "Monarchy",
+    "landlocked": "0",
+    "population": 2781677,
+    "religion": "Islam",
+    "temperature": 28.02
+  },
+  {
+    "country": "Romania",
+    "continent": "Europe",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 19466145,
+    "religion": "Christianity",
+    "temperature": 10.18
+  },
+  {
+    "country": "Russia",
+    "continent": "Europe",
+    "government": "Federal Republic",
+    "landlocked": "0",
+    "population": 144478050,
+    "religion": "Christianity",
+    "temperature": -3.79
+  },
+  {
+    "country": "Rwanda",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "1",
+    "population": 12301939,
+    "religion": "Christianity",
+    "temperature": 19.2
+  },
+  {
+    "country": "Saint Helena",
+    "continent": "Africa",
+    "government": "Dependent Territory of the UK",
+    "landlocked": "0",
+    "population": 6600,
+    "religion": "Christianity",
+    "temperature": 18.1
+  },
+  {
+    "country": "Saint Kitts and Nevis",
+    "continent": "North America",
+    "government": "Constitutional Monarchy",
+    "landlocked": "0",
+    "population": 52441,
+    "religion": "Christianity",
+    "temperature": 27.47
+  },
+  {
+    "country": "Saint Lucia",
+    "continent": "North America",
+    "government": "Constitutional Monarchy",
+    "landlocked": "0",
+    "population": 181889,
+    "religion": "Christianity",
+    "temperature": 27
+  },
+  {
+    "country": "Saint Pierre and Miquelon",
+    "continent": "North America",
+    "government": "Territorial Collectivity of France",
+    "landlocked": "0",
+    "population": 5888,
+    "religion": "Christianity",
+    "temperature": 5.72
+  },
+  {
+    "country": "Saint Vincent and the Grenadines",
+    "continent": "North America",
+    "government": "Constitutional Monarchy",
+    "landlocked": "0",
+    "population": 110210,
+    "religion": "Christianity",
+    "temperature": 26.17
+  },
+  {
+    "country": "Samoa",
+    "continent": "Oceania",
+    "government": "Parliamentary Republic",
+    "landlocked": "0",
+    "population": 196130,
+    "religion": "Christianity",
+    "temperature": 27.58
+  },
+  {
+    "country": "San Marino",
+    "continent": "Europe",
+    "government": "Republic",
+    "landlocked": "1",
+    "population": 33785,
+    "religion": "Christianity",
+    "temperature": 12.83
+  },
+  {
+    "country": "Sao Tome and Principe",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 211028,
+    "religion": "Christianity",
+    "temperature": 24.49
+  },
+  {
+    "country": "Saudi Arabia",
+    "continent": "Asia",
+    "government": "Monarchy",
+    "landlocked": "0",
+    "population": 33699947,
+    "religion": "Islam",
+    "temperature": 25.94
+  },
+  {
+    "country": "Senegal",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 15854360,
+    "religion": "Islam",
+    "temperature": 28.9
+  },
+  {
+    "country": "Serbia",
+    "continent": "Europe",
+    "government": "Republic",
+    "landlocked": "1",
+    "population": 6963764,
+    "religion": "Christianity",
+    "temperature": 11.4
+  },
+  {
+    "country": "Seychelles",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 96762,
+    "religion": "Christianity",
+    "temperature": 27.09
+  },
+  {
+    "country": "Sierra Leone",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 7650154,
+    "religion": "Islam",
+    "temperature": 26.54
+  },
+  {
+    "country": "Singapore",
+    "continent": "Asia",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 5638676,
+    "religion": "Buddhism",
+    "temperature": 27.68
+  },
+  {
+    "country": "Slovakia",
+    "continent": "Europe",
+    "government": "Republic",
+    "landlocked": "1",
+    "population": 5446771,
+    "religion": "Christianity",
+    "temperature": 8.83
+  },
+  {
+    "country": "Slovenia",
+    "continent": "Europe",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 2073894,
+    "religion": "Christianity",
+    "temperature": 9.86
+  },
+  {
+    "country": "Solomon Islands",
+    "continent": "Oceania",
+    "government": "Constitutional Monarchy",
+    "landlocked": "0",
+    "population": 652858,
+    "religion": "Christianity",
+    "temperature": 25.92
+  },
+  {
+    "country": "Somalia",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 15008154,
+    "religion": "Islam",
+    "temperature": 26.95
+  },
+  {
+    "country": "South Africa",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 57779622,
+    "religion": "Christianity",
+    "temperature": 18.23
+  },
+  {
+    "country": "Spain",
+    "continent": "Europe",
+    "government": "Constitutional Monarchy",
+    "landlocked": "0",
+    "population": 46796540,
+    "religion": "Christianity",
+    "temperature": 14.07
+  },
+  {
+    "country": "Sri Lanka",
+    "continent": "Asia",
+    "government": "Unitary Semi-Presidential Republic",
+    "landlocked": "0",
+    "population": 21670000,
+    "religion": "Buddhism",
+    "temperature": 27.25
+  },
+  {
+    "country": "Sudan",
+    "continent": "Africa",
+    "government": "Islamic Republic",
+    "landlocked": "0",
+    "population": 41801533,
+    "religion": "Islam",
+    "temperature": 27.95
+  },
+  {
+    "country": "Suriname",
+    "continent": "South America",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 575991,
+    "religion": "Christianity",
+    "temperature": 26.58
+  },
+  {
+    "country": "Sweden",
+    "continent": "Europe",
+    "government": "Constitutional Monarchy",
+    "landlocked": "0",
+    "population": 10175214,
+    "religion": "Christianity",
+    "temperature": 3.23
+  },
+  {
+    "country": "Switzerland",
+    "continent": "Europe",
+    "government": "Federation",
+    "landlocked": "1",
+    "population": 8513227,
+    "religion": "Christianity",
+    "temperature": 6.47
+  },
+  {
+    "country": "Syria",
+    "continent": "Asia",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 16906283,
+    "religion": "Islam",
+    "temperature": 18.75
+  },
+  {
+    "country": "Tajikistan",
+    "continent": "Asia",
+    "government": "Republic",
+    "landlocked": "1",
+    "population": 9100837,
+    "religion": "Islam",
+    "temperature": 3.85
+  },
+  {
+    "country": "Tanzania",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 56318348,
+    "religion": "Christianity",
+    "temperature": 22.92
+  },
+  {
+    "country": "Thailand",
+    "continent": "Asia",
+    "government": "Constitutional Monarchy",
+    "landlocked": "0",
+    "population": 69428524,
+    "religion": "Buddhism",
+    "temperature": 26.85
+  },
+  {
+    "country": "The Democratic Republic of Congo",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 84068091,
+    "religion": "Christianity",
+    "temperature": 24.35
+  },
+  {
+    "country": "Togo",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 7889094,
+    "religion": "Christianity",
+    "temperature": 27.33
+  },
+  {
+    "country": "Tokelau",
+    "continent": "Oceania",
+    "government": "Nonmetropolitan Territory of New Zealand",
+    "landlocked": "0",
+    "population": 1411,
+    "religion": "Christianity",
+    "temperature": 28.71
+  },
+  {
+    "country": "Tonga",
+    "continent": "Oceania",
+    "government": "Monarchy",
+    "landlocked": "0",
+    "population": 103197,
+    "religion": "Christianity",
+    "temperature": 25.01
+  },
+  {
+    "country": "Trinidad and Tobago",
+    "continent": "North America",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 1389858,
+    "religion": "Christianity",
+    "temperature": 26.55
+  },
+  {
+    "country": "Tunisia",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 11565204,
+    "religion": "Islam",
+    "temperature": 20.53
+  },
+  {
+    "country": "Turkey",
+    "continent": "Asia",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 82319724,
+    "religion": "Islam",
+    "temperature": 11.66
+  },
+  {
+    "country": "Turkmenistan",
+    "continent": "Asia",
+    "government": "Republic",
+    "landlocked": "1",
+    "population": 5850908,
+    "religion": "Islam",
+    "temperature": 16.66
+  },
+  {
+    "country": "Turks and Caicos Islands",
+    "continent": "North America",
+    "government": "Dependent Territory of the UK",
+    "landlocked": "0",
+    "population": 37665,
+    "religion": "Christianity",
+    "temperature": 26.29
+  },
+  {
+    "country": "Tuvalu",
+    "continent": "Oceania",
+    "government": "Constitutional Monarchy",
+    "landlocked": "0",
+    "population": 11508,
+    "religion": "Christianity",
+    "temperature": 28.62
+  },
+  {
+    "country": "Uganda",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "1",
+    "population": 42723139,
+    "religion": "Christianity",
+    "temperature": 23.25
+  },
+  {
+    "country": "Ukraine",
+    "continent": "Europe",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 44622516,
+    "religion": "Christianity",
+    "temperature": 9.27
+  },
+  {
+    "country": "United Arab Emirates",
+    "continent": "Asia",
+    "government": "Emirate Federation",
+    "landlocked": "0",
+    "population": 9630959,
+    "religion": "Islam",
+    "temperature": 28.17
+  },
+  {
+    "country": "United Kingdom",
+    "continent": "Europe",
+    "government": "Constitutional Monarchy",
+    "landlocked": "0",
+    "population": 66460344,
+    "religion": "Christianity",
+    "temperature": 9.24
+  },
+  {
+    "country": "United States",
+    "continent": "North America",
+    "government": "Federal Republic",
+    "landlocked": "0",
+    "population": 326687501,
+    "religion": "Christianity",
+    "temperature": 9.46
+  },
+  {
+    "country": "Uruguay",
+    "continent": "South America",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 3449299,
+    "religion": "Christianity",
+    "temperature": 17.97
+  },
+  {
+    "country": "Uzbekistan",
+    "continent": "Asia",
+    "government": "Republic",
+    "landlocked": "1",
+    "population": 32955400,
+    "religion": "Islam",
+    "temperature": 13.69
+  },
+  {
+    "country": "Vanuatu",
+    "continent": "Oceania",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 292680,
+    "religion": "Christianity",
+    "temperature": 24.44
+  },
+  {
+    "country": "Venezuela",
+    "continent": "South America",
+    "government": "Federal Republic",
+    "landlocked": "0",
+    "population": 28870195,
+    "religion": "Christianity",
+    "temperature": 25.71
+  },
+  {
+    "country": "Vietnam",
+    "continent": "Asia",
+    "government": "Socialistic Republic",
+    "landlocked": "0",
+    "population": 95540395,
+    "religion": "Folk Religions",
+    "temperature": 24.79
+  },
+  {
+    "country": "Wallis and Futuna",
+    "continent": "Oceania",
+    "government": "Nonmetropolitan Territory of France",
+    "landlocked": "0",
+    "population": 15289,
+    "religion": "Christianity",
+    "temperature": 27.3
+  },
+  {
+    "country": "Yemen",
+    "continent": "Asia",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 28498687,
+    "religion": "Islam",
+    "temperature": 25.54
+  },
+  {
+    "country": "Zambia",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "1",
+    "population": 17351822,
+    "religion": "Christianity",
+    "temperature": 22.23
+  },
+  {
+    "country": "Zimbabwe",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "1",
+    "population": 14439018,
+    "religion": "Christianity",
+    "temperature": 21.9
+  }
+]
