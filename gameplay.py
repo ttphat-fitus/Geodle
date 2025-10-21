@@ -30,7 +30,6 @@ WINDOW_WIDTH = 1000
 WINDOW_HEIGHT = 700
 FPS = 60
 
-# Confetti colors (used for win celebration)
 CONFETTI_COLS = [
     (236, 99, 95), (255, 211, 102), (147, 221, 119),
     (123, 178, 255), (195, 155, 211)
@@ -78,12 +77,15 @@ def ui_init(self, screen, game):
     self._suggest_thumb_rect = None
     self._dragging_sugg_thumb = False
     self._drag_thumb_offset = 0
+    self._sugg_wheel_accum = 0.0
+    self._last_wheel_time = 0
+    self._sugg_scroll_target = float(self.sugg_scroll_idx)
+    self._sugg_scroll = float(self.sugg_scroll_idx)
 
     self.logo_rect = pygame.Rect(16, 12, 140, 56)
     self.logo_surf = None
     try:
         base = os.path.dirname(__file__)
-        # Prefer packaged logo in img/, fallback to package root logo.png
         logo_candidates = [
             os.path.join(base, 'img', 'logo.png'),
             os.path.join(base, 'logo.png'),
@@ -324,24 +326,37 @@ class UI:
         self.screen.blit(rem_s, rem_rect)
         y = rem_rect.bottom + 8
 
-        # Search bar
         y += 10
         y = self._draw_search(left, y)
-
-        # Help / How to play
         y += 12
-        if self.show_help:
-            y = self._draw_help(left, y)
-
         y += 8
         self._draw_table(left, y, sw)
         self._draw_suggestions_overlay()
         self._draw_blinking_caret()
 
-        # Draw confetti particles if any
         try:
             for x, y, vx, vy, s, color, life in getattr(self.game, 'particles', []):
                 pygame.draw.rect(self.screen, color, pygame.Rect(int(x), int(y), s, s))
+        except Exception:
+            pass
+
+        try:
+            tooltip_lines = self._hover_tooltip_text()
+            if tooltip_lines:
+                mx, my = pygame.mouse.get_pos()
+                padx, pady = 10, 6
+                texts = [self.f_small.render(line, True, INK_900) for line in tooltip_lines]
+                w = max(t.get_width() for t in texts) + padx*2
+                h = sum(t.get_height() for t in texts) + pady*(len(texts)+1)
+                tx = clamp(mx + 16, 8, self.screen.get_width() - w - 8)
+                ty = clamp(my + 16, 8, self.screen.get_height() - h - 8)
+                trect = pygame.Rect(tx, ty, w, h)
+                draw_round_rect(self.screen, trect, WHITE, radius=6, width=0)
+                pygame.draw.rect(self.screen, BORDER, trect, width=1, border_radius=6)
+                yy = ty + pady
+                for t in texts:
+                    self.screen.blit(t, (tx + padx, yy))
+                    yy += t.get_height() + pady
         except Exception:
             pass
 
@@ -418,10 +433,53 @@ class UI:
                 total = len(getattr(self.game, 'suggestions', []) or [])
                 if total:
                     max_show = min(6, total)
-                    self.sugg_scroll_idx = clamp(
-                        self.sugg_scroll_idx - event.y,  # small per-notch step
-                        0, max(0, total - max_show)
-                    )
+                    now = pygame.time.get_ticks()
+                    dt_ms = max(1, now - getattr(self, '_last_wheel_time', now))
+                    self._last_wheel_time = now
+                    delta = -float(event.y)
+                    accel = clamp(1.0 + (200.0 / float(dt_ms)), 1.0, 6.0)
+                    self._sugg_wheel_accum += delta * accel * 0.6
+
+                    moved = 0
+                    while self._sugg_wheel_accum >= 0.5:
+                        self._sugg_wheel_accum -= 1.0
+                        moved += 1
+                    while self._sugg_wheel_accum <= -0.5:
+                        self._sugg_wheel_accum += 1.0
+                        moved -= 1
+
+                    if moved != 0:
+                        sel = getattr(self.game, 'selected_suggestion', 0)
+                        sel = clamp(int(sel + moved), 0, total - 1)
+                        self.game.selected_suggestion = sel
+                        if sel < self.sugg_scroll_idx:
+                            self.sugg_scroll_idx = sel
+                        elif sel >= self.sugg_scroll_idx + max_show:
+                            self.sugg_scroll_idx = sel - max_show + 1
+                        self._sugg_scroll_target = float(self.sugg_scroll_idx)
+                        self._sugg_scroll = float(self.sugg_scroll_idx)
+                return
+
+        elif event.type == pygame.MOUSEBUTTONDOWN and event.button in (4, 5):
+            try:
+                pos = pygame.mouse.get_pos()
+            except Exception:
+                pos = getattr(event, 'pos', None)
+            if pos and getattr(self, '_suggest_drop_rect', None) and self._suggest_drop_rect.collidepoint(pos):
+                total = len(getattr(self.game, 'suggestions', []) or [])
+                if total:
+                    max_show = min(6, total)
+                    delta = -1 if event.button == 4 else 1
+                    sel = getattr(self.game, 'selected_suggestion', 0)
+                    sel = clamp(int(sel + delta), 0, total - 1)
+                    self.game.selected_suggestion = sel
+                    if sel < self.sugg_scroll_idx:
+                        self.sugg_scroll_idx = sel
+                    elif sel >= self.sugg_scroll_idx + max_show:
+                        self.sugg_scroll_idx = sel - max_show + 1
+                    self._sugg_scroll_target = float(self.sugg_scroll_idx)
+                    self._sugg_scroll = float(self.sugg_scroll_idx)
+                return
 
         elif event.type == pygame.MOUSEMOTION and getattr(self, '_dragging_sugg_thumb', False):
             if getattr(self, '_suggest_track_rect', None) is None or getattr(self, '_suggest_thumb_rect', None) is None:
@@ -444,7 +502,8 @@ class UI:
         table_top = getattr(self, "_table_top", None)
         table_cols = getattr(self, "_table_cols", [])
         rows = getattr(self, "_table_rows", 0)
-        if not table_top: 
+        self.hover_col = -1
+        if not table_top:
             self.hover_row = -1
             return
         x, y = pos
@@ -459,6 +518,15 @@ class UI:
             return
         row = int(y_rel // self.row_h)
         self.hover_row = row if 0 <= row < rows else -1
+        cx = left
+        col_idx = 0
+        for w in table_cols:
+            if x >= cx and x < cx + w:
+                self.hover_col = col_idx
+                break
+            cx += w
+            col_idx += 1
+        return
 
     def _init_fonts(self):
         pygame.font.init()
@@ -529,27 +597,58 @@ class UI:
         return max(self._submit_rect.bottom, self._input_rect.bottom) + 12
 
     def _draw_help(self, left, y):
-        # “How to Play”
-        dot = self.f_label.render("!", True, INK_700)
-        h = self.f_label.render("How to Play", True, INK_900)
         sw = self.screen.get_width()
-        dx = sw//2 - (dot.get_width() + 8 + h.get_width())//2
-        self.screen.blit(dot, (dx, y))
-        self.screen.blit(h, (dx + dot.get_width() + 8, y))
-        y += self.line_h
+        # Title
+        title_surf = self.f_sub.render("How to Play", True, INK_900)
+        icon_r = 12
+        gap = 10
+        total_w = icon_r * 2 + gap + title_surf.get_width()
+        dx = sw // 2 - total_w // 2
+
+        icon_cx = dx + icon_r
+        icon_cy = y + title_surf.get_height() // 2
+        pygame.draw.circle(self.screen, INK_900, (icon_cx, icon_cy), icon_r)
+        try:
+            i_s = self.f_label.render("i", True, WHITE)
+            self.screen.blit(i_s, (icon_cx - i_s.get_width()//2, icon_cy - i_s.get_height()//2))
+        except Exception:
+            pass
+
+        self.screen.blit(title_surf, (dx + icon_r*2 + gap, y))
+        y += title_surf.get_height() + 8
 
         help_lines = [
             "Figure out the secret country in 6 guesses!",
             "Each guess must be a country that appears in the search box.",
             "After each guess, you get hints for Continent, Population, Landlocked, Religion, Avg. Temp., and Government.",
         ]
+
+        def wrap_text(text, font, maxw):
+            words = text.split()
+            lines = []
+            cur = ""
+            for w in words:
+                test = (cur + " " + w).strip() if cur else w
+                if font.size(test)[0] <= maxw:
+                    cur = test
+                else:
+                    if cur:
+                        lines.append(cur)
+                    cur = w
+            if cur:
+                lines.append(cur)
+            return lines
+
+        col_w = min(self.max_width, sw - 120)
+        col_left = sw//2 - col_w//2
+        pad = 6
         for line in help_lines:
-            s = self.f_small.render(line, True, INK_700)
-            srect = s.get_rect()
-            srect.centerx = self.screen.get_width() // 2
-            srect.top = y
-            self.screen.blit(s, srect)
-            y += self.line_h - 4
+            wrapped = wrap_text(line, self.f_small, col_w - pad*2)
+            for l in wrapped:
+                s = self.f_small.render(l, True, INK_700)
+                self.screen.blit(s, (col_left + pad, y))
+                y += self.line_h - 6
+            y += 2
         return y
 
     def _draw_header_cell(self, x, y, w, title):
@@ -581,21 +680,24 @@ class UI:
     def _status_from_result(self, result, key) -> str:
     # pull value
         val = result.get(key, None) if isinstance(result, dict) else getattr(result, key, None)
-
+ 
         if key in ("continent", "landlocked", "religion", "government"):
             return "good" if val in ("match", True, "same") else "bad"
-
+ 
         if key == "population":
             try:
-                return "good" if abs(float(val)) <= 0.10 else "bad"
+                fv = float(val)
+                if abs(fv) <= 0.10:
+                    return "good"
+                return "up" if fv < 0 else "down"
             except Exception:
                 return "bad"
-
+ 
         if key == "temperature":
             if val in ("up", "down"):
                 return val
             return "good" if val in ("match", True) else "bad"
-
+ 
         return "bad"
 
 
@@ -609,17 +711,17 @@ class UI:
         self._table_cols = cols
         x = left
         top = y
+        raw_guesses = getattr(self.game, "guesses", []) or []
         # headers
         headers = ["Country", "Continent", "Population", "Landlocked", "Religion", "Avg. Temp.", "Gov."]
         hx = x
-        for i, w in enumerate(cols):
-            # avoid header overflow
-            title = headers[i] if i < len(headers) else ""
-            self._draw_header_cell(hx, y, w, title)
-            hx += w
-        y += self.table_header_h + self.table_border
-
-        raw_guesses = getattr(self.game, "guesses", []) or []
+        if not (self.show_help and len(raw_guesses) == 0):
+            for i, w in enumerate(cols):
+                # avoid header overflow
+                title = headers[i] if i < len(headers) else ""
+                self._draw_header_cell(hx, y, w, title)
+                hx += w
+            y += self.table_header_h + self.table_border
         guesses = []
         for g in raw_guesses:
             result = {}
@@ -648,6 +750,133 @@ class UI:
                 result['government'] = 'match' if getattr(g, 'government', None) == getattr(correct, 'government', None) else None
 
             guesses.append((g, result))
+
+        if self.show_help and len(raw_guesses) == 0:
+            hy = top
+            sw = self.screen.get_width()
+            title_surf = self.f_sub.render("How to Play", True, INK_900)
+            icon_r = 12
+            gap = 10
+            total_w = icon_r * 2 + gap + title_surf.get_width()
+            dx = sw // 2 - total_w // 2
+            icon_cx = dx + icon_r
+            icon_cy = hy + title_surf.get_height() // 2
+
+            pygame.draw.circle(self.screen, INK_900, (icon_cx, icon_cy), icon_r)
+
+            try:
+                i_s = self.f_label.render("i", True, WHITE)
+                self.screen.blit(i_s, (
+                    icon_cx - i_s.get_width() // 2,
+                    icon_cy - i_s.get_height() // 2
+                ))
+            except Exception:
+                pass
+
+            self.screen.blit(title_surf, (dx + icon_r * 2 + gap, hy))
+            hy += title_surf.get_height() + 8
+
+            help_lines = [
+                "Figure out the secret country in 6 guesses!",
+                "Each guess must be a country that appears in the search box.",
+                "After each guess, you get hints for Continent, Population, Landlocked, Religion, Avg. Temp., and Government.",
+            ]
+            def wrap_text(text, font, maxw):
+                words = text.split()
+                lines = []
+                cur = ""
+                for w in words:
+                    test = (cur + " " + w).strip() if cur else w
+                    if font.size(test)[0] <= maxw:
+                        cur = test
+                    else:
+                        if cur:
+                            lines.append(cur)
+                        cur = w
+                if cur:
+                    lines.append(cur)
+                return lines
+
+            table_w = sum(cols)
+            pad = 12
+            for line in help_lines:
+                wrapped = wrap_text(line, self.f_small, table_w - pad*2)
+                for l in wrapped:
+                    s = self.f_small.render(l, True, INK_700)
+                    self.screen.blit(s, (left + pad, hy))
+                    hy += self.line_h - 6
+                hy += 6
+
+            cap = self.f_small.render("For example:", True, INK_700)
+            self.screen.blit(cap, (left, hy))
+            hy += self.line_h - 6
+
+            # draw headers at hy
+            header_y = hy
+            hx = left
+            for i, w in enumerate(cols):
+                title = headers[i] if i < len(headers) else ""
+                self._draw_header_cell(hx, header_y, w, title)
+                hx += w
+            hy += self.table_header_h + self.table_border
+
+            # example row
+            example_name = "Australia"
+            statuses = ['bad', 'good', 'good', 'bad', 'up', 'bad']
+            row_rect = pygame.Rect(left, hy, sum(cols), self.row_h)
+            pygame.draw.rect(self.screen, (250,250,250), row_rect)
+            pygame.draw.rect(self.screen, BORDER, (left, hy, cols[0], self.row_h), width=self.table_border)
+            name_s = self.f_small.render(example_name, True, INK_900)
+            self.screen.blit(name_s, (left + 12, hy + (self.row_h - name_s.get_height())//2))
+            cx = left + cols[0]
+            for i, st in enumerate(statuses):
+                w = cols[i+1] if i+1 < len(cols) else 120
+                pygame.draw.rect(self.screen, BORDER, (cx, hy, w, self.row_h), width=self.table_border)
+                self._draw_hint_square(pygame.Rect(cx, hy, w, self.row_h), st)
+                cx += w
+            hy += self.row_h + 12
+
+            expl_lines = [
+                "You guess Australia, but it's in the wrong continent from the correct country.",
+                "The population is within 10% of the correct country's population, so it shows green.",
+                "Landlocked refers to whether the country is surrounded by land; both are coastal here (green).",
+                "Avg. Temp shows direction (blue arrow) when different; here target is higher (up).",
+                "Hover over the boxes to get information on your guess's data.",
+                "Hover over the category titles to get more information on what they mean."
+            ]
+            icons = ['bad', 'good', 'good', 'up', None, None]
+            ty = hy
+            icon_size = 18
+            icon_margin = 16
+            table_right = left + sum(cols)
+            for idx, line in enumerate(expl_lines):
+                s = self.f_small.render(line, True, INK_700)
+                self.screen.blit(s, (left + 12, ty))
+                st = icons[idx] if idx < len(icons) else None
+                if st:
+                    ix = table_right - icon_margin - icon_size
+                    iy = ty + (self.line_h - icon_size) // 2
+                    if st == 'good':
+                        pygame.draw.rect(self.screen, GREEN, pygame.Rect(ix, iy, icon_size, icon_size), border_radius=4)
+                    elif st == 'bad':
+                        pygame.draw.rect(self.screen, RED, pygame.Rect(ix, iy, icon_size, icon_size), border_radius=4)
+                    elif st in ('up', 'down'):
+                        color = BLUE
+                        cx = ix + icon_size // 2
+                        cy = iy + icon_size // 2
+                        tri_h = icon_size // 2
+                        if st == 'up':
+                            pts = [(cx, cy - tri_h // 2), (cx - tri_h // 2, cy + tri_h // 2), (cx + tri_h // 2, cy + tri_h // 2)]
+                        else:
+                            pts = [(cx, cy + tri_h // 2), (cx - tri_h // 2, cy - tri_h // 2), (cx + tri_h // 2, cy - tri_h // 2)]
+                        pygame.draw.rect(self.screen, color, pygame.Rect(ix, iy, icon_size, icon_size), border_radius=4)
+                        pygame.draw.polygon(self.screen, WHITE, pts)
+                ty += self.line_h - 4
+
+            self._table_rows = 0
+            self._table_top = (left, header_y)
+            return
+
         self._table_rows = len(guesses)
         self._table_top = (left, top)
 
@@ -685,8 +914,99 @@ class UI:
 
             y += self.row_h
         if not guesses:
-            hint = self.f_small.render("Your hints will appear here after each guess.", True, INK_500)
-            self.screen.blit(hint, (left + 12, y + 8))
+            ex_cols = cols
+
+            # small left-aligned caption like the web version: "For example:"
+            cap = self.f_small.render("For example:", True, INK_700)
+            self.screen.blit(cap, (left, y))
+            y += self.line_h - 6
+
+            example_name = "Australia"
+            statuses = [ 'bad',  
+                         'good',
+                         'good',
+                         'bad',
+                         'up',
+                         'bad' ]
+
+            row_rect = pygame.Rect(left, y, sum(ex_cols), self.row_h)
+            pygame.draw.rect(self.screen, (250,250,250), row_rect)
+            pygame.draw.rect(self.screen, BORDER, (left, y, ex_cols[0], self.row_h), width=self.table_border)
+            name_s = self.f_small.render(example_name, True, INK_900)
+            self.screen.blit(name_s, (left + 12, y + (self.row_h - name_s.get_height())//2))
+
+            cx = left + ex_cols[0]
+            for i, st in enumerate(statuses):
+                w = ex_cols[i+1] if i+1 < len(ex_cols) else 120
+                pygame.draw.rect(self.screen, BORDER, (cx, y, w, self.row_h), width=self.table_border)
+                self._draw_hint_square(pygame.Rect(cx, y, w, self.row_h), st)
+                cx += w
+
+            y += self.row_h + 12
+
+            expl_lines = [
+                "You guess Australia, but it's in the wrong continent from the correct country.",
+                "The population is within 10% of the correct country's population, so it shows green.",
+                "Landlocked refers to whether the country is surrounded by land; both are coastal here (green).",
+                "Avg. Temp shows direction (blue arrow) when different; here target is higher (up).",
+                "Hover over the boxes to get information on your guess's data.",
+                "Hover over the category titles to get more information on what they mean."
+            ]
+            ty = y
+            for line in expl_lines:
+                s = self.f_small.render(line, True, INK_700)
+                self.screen.blit(s, (left + 12, ty))
+                ty += self.line_h - 4
+            return
+
+    def _hover_tooltip_text(self):
+        r = getattr(self, "hover_row", -1)
+        c = getattr(self, "hover_col", -1)
+        if r is None or r < 0 or c is None or c < 0:
+            return None
+        keys = ["country", "continent", "population", "landlocked", "religion", "temperature", "government"]
+        try:
+            raw_guesses = getattr(self.game, "guesses", []) or []
+            if r >= len(raw_guesses):
+                return None
+            g = raw_guesses[r]
+            if isinstance(g, tuple) and len(g) >= 2:
+                g_country = g[0]
+            else:
+                g_country = g
+            correct = getattr(self.game, "correct_country", None)
+            if not g_country or not correct:
+                return None
+            key = keys[c] if c < len(keys) else None
+            if key is None:
+                return None
+            lines = []
+            if key == "country":
+                lines.append(f"Guess: {getattr(g_country,'name',str(g_country))}")
+                return lines
+            if key == "continent":
+                lines.append(f"{getattr(g_country,'continent','')}")
+                return lines
+            if key == "population":
+                gv = getattr(g_country, "population", None)
+                lines.append(f"{gv:,}" if isinstance(gv,int) else f"{gv}")
+                return lines
+            if key == "landlocked":
+                lines.append(("Landlocked" if getattr(g_country,'landlocked',False) else "Coastal"))
+                return lines
+            if key == "religion":
+                lines.append(f"{getattr(g_country,'religion','')}")
+                return lines
+            if key == "temperature":
+                gv = getattr(g_country, "temperature", None)
+                lines.append(f"{gv}°C")
+                return lines
+            if key == "government":
+                lines.append(f"{getattr(g_country,'government','')}")
+                return lines
+        except Exception:
+            return None
+        return None
 
     def _draw_blinking_caret(self):
         if not getattr(self, "input_focused", False):
@@ -729,18 +1049,32 @@ class UI:
         self._sugg_rects = []
         inner = drop.inflate(-8, -8)
 
+        # clamp integer index and keep fractional target in sync
         self.sugg_scroll_idx = clamp(self.sugg_scroll_idx, 0, max(0, total - max_show))
         sel = getattr(self.game, 'selected_suggestion', 0)
         if sel < self.sugg_scroll_idx:
             self.sugg_scroll_idx = sel
         elif sel >= self.sugg_scroll_idx + max_show:
             self.sugg_scroll_idx = sel - max_show + 1
+        # keep animated target close to integer index
+        self._sugg_scroll_target = float(self.sugg_scroll_idx)
 
-        start = self.sugg_scroll_idx
+        # animate fractional scroll towards target for smoothness
+        # simple lerp with frame-timestep weighting
+        try:
+            t = 0.18
+            self._sugg_scroll += (self._sugg_scroll_target - self._sugg_scroll) * t
+        except Exception:
+            self._sugg_scroll = float(self.sugg_scroll_idx)
 
+        start = int(math.floor(self._sugg_scroll))
+        frac_off = self._sugg_scroll - start
+
+        # draw visible rows using fractional offset so they slide smoothly
         for i in range(max_show):
             idx = start + i
-            r = pygame.Rect(inner.left, inner.top + i*self.cell_h, inner.width, self.cell_h)
+            y_off = inner.top + int((i - frac_off) * self.cell_h)
+            r = pygame.Rect(inner.left, y_off, inner.width, self.cell_h)
 
             bg = (240, 248, 255) if idx == sel else WHITE
             pygame.draw.rect(self.screen, bg, r, border_radius=6)
@@ -767,9 +1101,15 @@ class UI:
             pygame.draw.rect(self.screen, (235, 235, 235), track, border_radius=3)
             thumb_h = max(24, int(track.height * (max_show / total)))
             max_start = total - max_show
-            thumb_y = int(track.top + (track.height - thumb_h) * (self.sugg_scroll_idx / max_start)) if max_start else track.top
-            pygame.draw.rect(self.screen, (200, 200, 200), pygame.Rect(track.left, thumb_y, track.width, thumb_h), border_radius=3)
+            # compute thumb position using fractional scroll for smoothness
+            if max_start:
+                thumb_top = int(track.top + (track.height - thumb_h) * (self._sugg_scroll / max_start))
+            else:
+                thumb_top = track.top
+            thumb_rect = pygame.Rect(track.left, thumb_top, track.width, thumb_h)
+            pygame.draw.rect(self.screen, (200, 200, 200), thumb_rect, border_radius=3)
             self._suggest_track_rect = track
+            self._suggest_thumb_rect = thumb_rect
         else:
             self._suggest_track_rect = None
 
