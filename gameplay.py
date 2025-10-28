@@ -560,7 +560,6 @@ class UI:
         self._input_rect = pygame.Rect(group_left, y, input_w, self.input_h)
         self._submit_rect = pygame.Rect(self._input_rect.right + gap, y, submit_w, self.input_h)
 
-        # Input box
         draw_round_rect(self.screen, self._input_rect, (0,0,0), radius=10, width=1)
         draw_round_rect(self.screen, self._input_rect.inflate(-2,-2), ACCENT, radius=10, width=0)
         txt = self.game.current_input if getattr(self.game, "current_input", "") else ""
@@ -678,7 +677,6 @@ class UI:
             pygame.draw.polygon(self.screen, (255, 255, 255), pts)
 
     def _status_from_result(self, result, key) -> str:
-    # pull value
         val = result.get(key, None) if isinstance(result, dict) else getattr(result, key, None)
  
         if key in ("continent", "landlocked", "religion", "government"):
@@ -820,7 +818,6 @@ class UI:
                 hx += w
             hy += self.table_header_h + self.table_border
 
-            # example row
             example_name = "Australia"
             statuses = ['bad', 'good', 'good', 'bad', 'up', 'bad']
             row_rect = pygame.Rect(left, hy, sum(cols), self.row_h)
@@ -915,8 +912,6 @@ class UI:
             y += self.row_h
         if not guesses:
             ex_cols = cols
-
-            # small left-aligned caption like the web version: "For example:"
             cap = self.f_small.render("For example:", True, INK_700)
             self.screen.blit(cap, (left, y))
             y += self.line_h - 6
@@ -1049,18 +1044,13 @@ class UI:
         self._sugg_rects = []
         inner = drop.inflate(-8, -8)
 
-        # clamp integer index and keep fractional target in sync
         self.sugg_scroll_idx = clamp(self.sugg_scroll_idx, 0, max(0, total - max_show))
         sel = getattr(self.game, 'selected_suggestion', 0)
         if sel < self.sugg_scroll_idx:
             self.sugg_scroll_idx = sel
         elif sel >= self.sugg_scroll_idx + max_show:
             self.sugg_scroll_idx = sel - max_show + 1
-        # keep animated target close to integer index
         self._sugg_scroll_target = float(self.sugg_scroll_idx)
-
-        # animate fractional scroll towards target for smoothness
-        # simple lerp with frame-timestep weighting
         try:
             t = 0.18
             self._sugg_scroll += (self._sugg_scroll_target - self._sugg_scroll) * t
@@ -1069,8 +1059,6 @@ class UI:
 
         start = int(math.floor(self._sugg_scroll))
         frac_off = self._sugg_scroll - start
-
-        # draw visible rows using fractional offset so they slide smoothly
         for i in range(max_show):
             idx = start + i
             y_off = inner.top + int((i - frac_off) * self.cell_h)
@@ -1230,7 +1218,6 @@ def main():
                             running = False
                     else:
                         if event.key == pygame.K_RETURN:
-                            # Submit guess
                             if game.suggestions and 0 <= game.selected_suggestion < len(game.suggestions):
                                 selected = game.suggestions[game.selected_suggestion]
                                 if game.make_guess(selected):
