@@ -369,15 +369,6 @@
     "temperature": 7.59
   },
   {
-    "country": "Cocos (Keeling) Islands",
-    "continent": "Oceania",
-    "government": "Territory of Australia",
-    "landlocked": "0",
-    "population": 596,
-    "religion": null,
-    "temperature": 26.79
-  },
-  {
     "country": "Colombia",
     "continent": "South America",
     "government": "Republic",
@@ -576,15 +567,6 @@
     "temperature": 23.37
   },
   {
-    "country": "Falkland Islands",
-    "continent": "South America",
-    "government": "Dependent Territory of the UK",
-    "landlocked": "0",
-    "population": 2840,
-    "religion": "Christianity",
-    "temperature": null
-  },
-  {
     "country": "Faroe Islands",
     "continent": "Europe",
     "government": "Part of Denmark",
@@ -646,15 +628,6 @@
     "population": 277679,
     "religion": "Christianity",
     "temperature": 24.3
-  },
-  {
-    "country": "French Southern territories",
-    "continent": "Antarctica",
-    "government": "Nonmetropolitan Territory of France",
-    "landlocked": "0",
-    "population": 0,
-    "religion": null,
-    "temperature": 4.11
   },
   {
     "country": "Gabon",
@@ -799,24 +772,6 @@
     "population": 11123176,
     "religion": "Christianity",
     "temperature": 24.95
-  },
-  {
-    "country": "Heard Island and McDonald Islands",
-    "continent": "Antarctica",
-    "government": "Territory of Australia",
-    "landlocked": "0",
-    "population": 0,
-    "religion": null,
-    "temperature": 2.46
-  },
-  {
-    "country": "Holy See (Vatican City State)",
-    "continent": "Europe",
-    "government": "Independent Church State",
-    "landlocked": null,
-    "population": 825,
-    "religion": null,
-    "temperature": 16.34
   },
   {
     "country": "Honduras",
@@ -1296,15 +1251,6 @@
     "temperature": 10.49
   },
   {
-    "country": "Netherlands Antilles",
-    "continent": "North America",
-    "government": "Nonmetropolitan Territory of The Netherlands",
-    "landlocked": "0",
-    "population": 227049,
-    "religion": null,
-    "temperature": null
-  },
-  {
     "country": "New Caledonia",
     "continent": "Oceania",
     "government": "Nonmetropolitan Territory of France",
@@ -1737,15 +1683,6 @@
     "temperature": 18.23
   },
   {
-    "country": "South Georgia and the South Sandwich Islands",
-    "continent": "Antarctica",
-    "government": "Dependent Territory of the UK",
-    "landlocked": "0",
-    "population": 30,
-    "religion": null,
-    "temperature": null
-  },
-  {
     "country": "South Korea",
     "continent": "Asia",
     "government": "Republic",
@@ -2061,24 +1998,6 @@
     "temperature": 24.79
   },
   {
-    "country": "Virgin Islands, British",
-    "continent": "North America",
-    "government": null,
-    "landlocked": "0",
-    "population": 29802,
-    "religion": null,
-    "temperature": 26.7
-  },
-  {
-    "country": "Virgin Islands, U.S.",
-    "continent": "North America",
-    "government": null,
-    "landlocked": "0",
-    "population": 106977,
-    "religion": null,
-    "temperature": 26.98
-  },
-  {
     "country": "Wallis and Futuna",
     "continent": "Oceania",
     "government": "Nonmetropolitan Territory of France",
@@ -2086,15 +2005,6 @@
     "population": 15289,
     "religion": "Christianity",
     "temperature": 27.3
-  },
-  {
-    "country": "Western Sahara",
-    "continent": "Africa",
-    "government": "Occupied by Marocco",
-    "landlocked": "0",
-    "population": 652271,
-    "religion": "Islam",
-    "temperature": null
   },
   {
     "country": "Yemen",
