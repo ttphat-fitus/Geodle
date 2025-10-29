@@ -103,7 +103,7 @@
     "continent": "Oceania",
     "government": "Federation Constitutional Monarchy",
     "landlocked": "0",
-    "population": 24982688,
+    "population": 27536874,
     "religion": "Christianity",
     "temperature": 22.05
   },
@@ -315,6 +315,15 @@
     "temperature": -4.03
   },
   {
+    "country": "Cape Verde",
+    "continent": "Africa",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 543767,
+    "religion": "Christianity",
+    "temperature": 22.53
+  },
+  {
     "country": "Cayman Islands",
     "continent": "North America",
     "government": "Dependent Territory of the UK",
@@ -351,13 +360,31 @@
     "temperature": 9.39
   },
   {
+    "country": "China",
+    "continent": "Asia",
+    "government": "People's Republic",
+    "landlocked": "0",
+    "population": 1408280000,
+    "religion": "Unaffiliated Religions",
+    "temperature": 7.59
+  },
+  {
+    "country": "Cocos (Keeling) Islands",
+    "continent": "Oceania",
+    "government": "Territory of Australia",
+    "landlocked": "0",
+    "population": 596,
+    "religion": null,
+    "temperature": 26.79
+  },
+  {
     "country": "Colombia",
     "continent": "South America",
     "government": "Republic",
     "landlocked": "0",
     "population": 49648685,
     "religion": "Christianity",
-    "temperature": 25
+    "temperature": 25.0
   },
   {
     "country": "Comoros",
@@ -423,6 +450,15 @@
     "temperature": 18.95
   },
   {
+    "country": "Czech Republic",
+    "continent": "Europe",
+    "government": "Republic",
+    "landlocked": "1",
+    "population": 10629928,
+    "religion": "Unaffiliated Religions",
+    "temperature": 8.6
+  },
+  {
     "country": "Denmark",
     "continent": "Europe",
     "government": "Constitutional Monarchy",
@@ -457,6 +493,15 @@
     "population": 10627165,
     "religion": "Christianity",
     "temperature": 24.55
+  },
+  {
+    "country": "East Timor",
+    "continent": "Asia",
+    "government": "Administrated by the UN",
+    "landlocked": "0",
+    "population": 1267972,
+    "religion": null,
+    "temperature": 24.57
   },
   {
     "country": "Ecuador",
@@ -504,6 +549,15 @@
     "temperature": 26.63
   },
   {
+    "country": "Estonia",
+    "continent": "Europe",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 1321977,
+    "religion": "Unaffiliated Religions",
+    "temperature": 6.34
+  },
+  {
     "country": "Eswatini",
     "continent": "Africa",
     "government": "Monarchy",
@@ -522,7 +576,34 @@
     "temperature": 23.37
   },
   {
-    "country": "Fiji Islands",
+    "country": "Falkland Islands",
+    "continent": "South America",
+    "government": "Dependent Territory of the UK",
+    "landlocked": "0",
+    "population": 2840,
+    "religion": "Christianity",
+    "temperature": null
+  },
+  {
+    "country": "Faroe Islands",
+    "continent": "Europe",
+    "government": "Part of Denmark",
+    "landlocked": "0",
+    "population": 48497,
+    "religion": "Christianity",
+    "temperature": 6.6
+  },
+  {
+    "country": "Federated States of Micronesia",
+    "continent": "Oceania",
+    "government": "Federal Republic",
+    "landlocked": "0",
+    "population": 112640,
+    "religion": "Christianity",
+    "temperature": 27.28
+  },
+  {
+    "country": "Fiji",
     "continent": "Oceania",
     "government": "Republic",
     "landlocked": "0",
@@ -549,6 +630,15 @@
     "temperature": 11.65
   },
   {
+    "country": "French Guiana",
+    "continent": "South America",
+    "government": "Overseas Department of France",
+    "landlocked": "0",
+    "population": 290691,
+    "religion": "Christianity",
+    "temperature": null
+  },
+  {
     "country": "French Polynesia",
     "continent": "Oceania",
     "government": "Nonmetropolitan Territory of France",
@@ -556,6 +646,15 @@
     "population": 277679,
     "religion": "Christianity",
     "temperature": 24.3
+  },
+  {
+    "country": "French Southern territories",
+    "continent": "Antarctica",
+    "government": "Nonmetropolitan Territory of France",
+    "landlocked": "0",
+    "population": 0,
+    "religion": null,
+    "temperature": 4.11
   },
   {
     "country": "Gabon",
@@ -639,6 +738,15 @@
     "temperature": 26.49
   },
   {
+    "country": "Guadeloupe",
+    "continent": "North America",
+    "government": "Overseas Department of France",
+    "landlocked": "0",
+    "population": 395700,
+    "religion": "Christianity",
+    "temperature": null
+  },
+  {
     "country": "Guam",
     "continent": "Oceania",
     "government": "US Territory",
@@ -693,6 +801,24 @@
     "temperature": 24.95
   },
   {
+    "country": "Heard Island and McDonald Islands",
+    "continent": "Antarctica",
+    "government": "Territory of Australia",
+    "landlocked": "0",
+    "population": 0,
+    "religion": null,
+    "temperature": 2.46
+  },
+  {
+    "country": "Holy See (Vatican City State)",
+    "continent": "Europe",
+    "government": "Independent Church State",
+    "landlocked": null,
+    "population": 825,
+    "religion": null,
+    "temperature": 16.34
+  },
+  {
     "country": "Honduras",
     "continent": "North America",
     "government": "Republic",
@@ -700,6 +826,15 @@
     "population": 9587522,
     "religion": "Christianity",
     "temperature": 24.72
+  },
+  {
+    "country": "Hong Kong",
+    "continent": "Asia",
+    "government": "Special Administrative Region of China",
+    "landlocked": "0",
+    "population": 7451000,
+    "religion": "Unaffiliated Religions",
+    "temperature": 23.3
   },
   {
     "country": "Hungary",
@@ -724,7 +859,7 @@
     "continent": "Asia",
     "government": "Federal Republic",
     "landlocked": "0",
-    "population": 1352617328,
+    "population": 1417492000,
     "religion": "Hinduism",
     "temperature": 24.94
   },
@@ -799,6 +934,15 @@
     "population": 2934855,
     "religion": "Christianity",
     "temperature": 25.91
+  },
+  {
+    "country": "Japan",
+    "continent": "Asia",
+    "government": "Constitutional Monarchy",
+    "landlocked": "0",
+    "population": 126529100,
+    "religion": "Unaffiliated Religions",
+    "temperature": 11.78
   },
   {
     "country": "Jordan",
@@ -936,6 +1080,15 @@
     "temperature": 10.02
   },
   {
+    "country": "Macao",
+    "continent": "Asia",
+    "government": "Special Administrative Region of China",
+    "landlocked": "0",
+    "population": 631636,
+    "religion": "Folk Religions",
+    "temperature": null
+  },
+  {
     "country": "Madagascar",
     "continent": "Africa",
     "government": "Federal Republic",
@@ -999,6 +1152,15 @@
     "temperature": 28.01
   },
   {
+    "country": "Martinique",
+    "continent": "North America",
+    "government": "Overseas Department of France",
+    "landlocked": "0",
+    "population": 376480,
+    "religion": "Christianity",
+    "temperature": null
+  },
+  {
     "country": "Mauritania",
     "continent": "Africa",
     "government": "Republic",
@@ -1015,6 +1177,15 @@
     "population": 1265303,
     "religion": "Hinduism",
     "temperature": 23.33
+  },
+  {
+    "country": "Mayotte",
+    "continent": "Africa",
+    "government": "Territorial Collectivity of France",
+    "landlocked": "0",
+    "population": 270372,
+    "religion": "Islam",
+    "temperature": null
   },
   {
     "country": "Mexico",
@@ -1125,6 +1296,15 @@
     "temperature": 10.49
   },
   {
+    "country": "Netherlands Antilles",
+    "continent": "North America",
+    "government": "Nonmetropolitan Territory of The Netherlands",
+    "landlocked": "0",
+    "population": 227049,
+    "religion": null,
+    "temperature": null
+  },
+  {
     "country": "New Caledonia",
     "continent": "Oceania",
     "government": "Nonmetropolitan Territory of France",
@@ -1177,6 +1357,24 @@
     "population": 1624,
     "religion": "Christianity",
     "temperature": 25.03
+  },
+  {
+    "country": "Norfolk Island",
+    "continent": "Oceania",
+    "government": "Territory of Australia",
+    "landlocked": "0",
+    "population": 2169,
+    "religion": null,
+    "temperature": 19.01
+  },
+  {
+    "country": "North Korea",
+    "continent": "Asia",
+    "government": "Socialistic Republic",
+    "landlocked": "0",
+    "population": 25549819,
+    "religion": null,
+    "temperature": 6.98
   },
   {
     "country": "North Macedonia",
@@ -1287,6 +1485,15 @@
     "temperature": 26.27
   },
   {
+    "country": "Pitcairn",
+    "continent": "Oceania",
+    "government": "Dependent Territory of the UK",
+    "landlocked": "0",
+    "population": 67,
+    "religion": null,
+    "temperature": 20.56
+  },
+  {
     "country": "Poland",
     "continent": "Europe",
     "government": "Republic",
@@ -1321,6 +1528,15 @@
     "population": 2781677,
     "religion": "Islam",
     "temperature": 28.02
+  },
+  {
+    "country": "Reunion",
+    "continent": "Africa",
+    "government": "Overseas Department of France",
+    "landlocked": "0",
+    "population": 859959,
+    "religion": "Christianity",
+    "temperature": null
   },
   {
     "country": "Romania",
@@ -1374,7 +1590,7 @@
     "landlocked": "0",
     "population": 181889,
     "religion": "Christianity",
-    "temperature": 27
+    "temperature": 27.0
   },
   {
     "country": "Saint Pierre and Miquelon",
@@ -1521,6 +1737,33 @@
     "temperature": 18.23
   },
   {
+    "country": "South Georgia and the South Sandwich Islands",
+    "continent": "Antarctica",
+    "government": "Dependent Territory of the UK",
+    "landlocked": "0",
+    "population": 30,
+    "religion": null,
+    "temperature": null
+  },
+  {
+    "country": "South Korea",
+    "continent": "Asia",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 51606633,
+    "religion": "Unaffiliated Religions",
+    "temperature": 12.22
+  },
+  {
+    "country": "South Sudan",
+    "continent": "Africa",
+    "government": "Federal Provisional Unity",
+    "landlocked": "1",
+    "population": 10975920,
+    "religion": "Christianity",
+    "temperature": 27.97
+  },
+  {
     "country": "Spain",
     "continent": "Europe",
     "government": "Constitutional Monarchy",
@@ -1557,6 +1800,15 @@
     "temperature": 26.58
   },
   {
+    "country": "Svalbard and Jan Mayen",
+    "continent": "Europe",
+    "government": "Dependent Territory of Norway",
+    "landlocked": "0",
+    "population": 2572,
+    "religion": null,
+    "temperature": -6.78
+  },
+  {
     "country": "Sweden",
     "continent": "Europe",
     "government": "Constitutional Monarchy",
@@ -1582,6 +1834,15 @@
     "population": 16906283,
     "religion": "Islam",
     "temperature": 18.75
+  },
+  {
+    "country": "Taiwan",
+    "continent": "Asia",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 23317031,
+    "religion": "Folk Religions",
+    "temperature": 23.3
   },
   {
     "country": "Tajikistan",
@@ -1665,15 +1926,6 @@
     "temperature": 20.53
   },
   {
-    "country": "Turkey",
-    "continent": "Asia",
-    "government": "Republic",
-    "landlocked": "0",
-    "population": 82319724,
-    "religion": "Islam",
-    "temperature": 11.66
-  },
-  {
     "country": "Turkmenistan",
     "continent": "Asia",
     "government": "Republic",
@@ -1699,6 +1951,15 @@
     "population": 11508,
     "religion": "Christianity",
     "temperature": 28.62
+  },
+  {
+    "country": "Türkiye",
+    "continent": "Asia",
+    "government": "Republic",
+    "landlocked": "0",
+    "population": 82319724,
+    "religion": "Islam",
+    "temperature": 11.66
   },
   {
     "country": "Uganda",
@@ -1746,6 +2007,15 @@
     "temperature": 9.46
   },
   {
+    "country": "United States Minor Outlying Islands",
+    "continent": "Oceania",
+    "government": "Dependent Territory of the US",
+    "landlocked": "0",
+    "population": 300,
+    "religion": null,
+    "temperature": 24.97
+  },
+  {
     "country": "Uruguay",
     "continent": "South America",
     "government": "Republic",
@@ -1791,6 +2061,24 @@
     "temperature": 24.79
   },
   {
+    "country": "Virgin Islands, British",
+    "continent": "North America",
+    "government": null,
+    "landlocked": "0",
+    "population": 29802,
+    "religion": null,
+    "temperature": 26.7
+  },
+  {
+    "country": "Virgin Islands, U.S.",
+    "continent": "North America",
+    "government": null,
+    "landlocked": "0",
+    "population": 106977,
+    "religion": null,
+    "temperature": 26.98
+  },
+  {
     "country": "Wallis and Futuna",
     "continent": "Oceania",
     "government": "Nonmetropolitan Territory of France",
@@ -1798,6 +2086,15 @@
     "population": 15289,
     "religion": "Christianity",
     "temperature": 27.3
+  },
+  {
+    "country": "Western Sahara",
+    "continent": "Africa",
+    "government": "Occupied by Marocco",
+    "landlocked": "0",
+    "population": 652271,
+    "religion": "Islam",
+    "temperature": null
   },
   {
     "country": "Yemen",
